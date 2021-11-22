@@ -15,7 +15,6 @@ job 0:
   stage: deploy
   script:
     - pwd
-    - ls /BlazeDemo.yaml
     - ls
     - pwsh /Blazemeter-run.ps1 -apikey $apikey -apisecret $apisecret -testid $testid -showtaillog 'true' -createtest $createtest -testname $testname -projectid $projectid -inputstartfile $inputstartfile
    
