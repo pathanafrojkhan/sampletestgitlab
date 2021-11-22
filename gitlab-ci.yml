@@ -1,0 +1,21 @@
+image: dnyaneshwarnagre/blazemeter:1.4.2
+
+
+variables:
+  apikey: "38e53fd821771b102b5bfddc"
+  apisecret: "c9fb4b4be583657d952d3d25103b28590811e7b0f43bf8d7d9107b6345ae752f15a21d50"
+  testid: "9535237" 
+  createtest: "true"
+  inputstartfile: "BlazeDemo.yaml"
+  testname: "GitlabTest2"
+  projectid: "961236"
+
+
+job 0:
+  stage: deploy
+  script:
+    - pwd
+    - ls /builds/dnyaneshwar_nagre/gitlab-example/
+    - ls
+    - pwsh /Blazemeter-run.ps1 -apikey $apikey -apisecret $apisecret -testid $testid -showtaillog 'true' -createtest $createtest -testname $testname -projectid $projectid -inputstartfile $inputstartfile
+
