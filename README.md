@@ -1,2 +1,2 @@
 # sampletestgitlab
-hello
+samplegitlab
